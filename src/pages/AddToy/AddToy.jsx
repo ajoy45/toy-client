@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { authContext } from '../../Auth/AuthProvider';
 
 const AddToy = () => {
-    const [category,setCategory]=useState('')
+    const [category,setCategory]=useState('');
+ 
+    const{user}=useContext(authContext);
     const handelAddSubmit=e=>{
         e.preventDefault()
         const name=e.target.name.value;
@@ -12,7 +15,23 @@ const AddToy = () => {
         const number=e.target.number.value;
         const photoURL=e.target.photo.value;
         const description=e.target.description.value;
-        console.log(name,category,seller,email,price,rating,number,photoURL,description)
+        const toysInfo={
+            name,seller_Name:seller,Seller_email:email,price,rating,number,photoURL,description,category:category
+        }
+        fetch('http://localhost:3000/add-toy',{
+            method:"POST",
+            headers:{
+                "content-type":"application/json"
+            },
+            body:JSON.stringify(toysInfo)
+
+        })
+        .then(res=>res.json)
+        .then(data=>{
+            console.log(data)
+        })
+
+        
     }
     
     return (
@@ -25,10 +44,10 @@ const AddToy = () => {
 
                     <div className='mb-4 '>
                         <input type="text" name='name' placeholder="Toy Name" className="input input-bordered input-primary w-full max-w-xs mr-3" />
-                        <input type="text" name='seller' placeholder="seller Name" className="input input-bordered input-primary w-full max-w-xs" />
+                        <input type="text" name='seller' defaultValue={user?.displayName} className="input input-bordered input-primary w-full max-w-xs" />
                     </div>
                     <div className='mb-4 ' >
-                        <input type="email" name='email' placeholder="Your Email" className="input input-bordered input-primary w-full max-w-xs mr-3" />
+                        <input type="email" name='email' defaultValue={user?.email} className="input input-bordered input-primary w-full max-w-xs mr-3" />
                         <select onChange={(e)=>setCategory(e.target.value)}  className="select select-primary w-full max-w-xs" >
                             <option disabled selected>Sub-Category</option>
                             <option value='Car'>Car Toy</option>

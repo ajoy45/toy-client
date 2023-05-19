@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { authContext } from '../../Auth/AuthProvider';
 
 const Login = () => {
+     const[error,setError]=useState('')
+    const{loginUser, googleLogin}=useContext(authContext);
+    const handelGoogleLogin=()=>{
+        googleLogin()
+        .then((result)=>{
+           const user=result.user;
+           console.log(user)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    }
     const handelLogin=e=>{
         e.preventDefault()
         const email=e.target.email.value;
         const password=e.target.password.value;
-        console.log(email,password)
+        loginUser(email,password)
+        .then(result=>{
+            const user=result.user;
+            console.log(user)
+        })
+        .catch(error=>{
+          setError(error.message)
+        })
+        // console.log(email,password)
     }
     return (
         <section className="h-screen">
@@ -59,8 +80,11 @@ const Login = () => {
                                     </button>
                                     </Link>
                                 </div>
+                               
                             </div>
-
+                            <div>
+                            <p className='text-red-300'>{error}</p>
+                            </div>
 
                             <button
                                 type="submit"
@@ -80,7 +104,7 @@ const Login = () => {
                             </div>
 
 
-                            <a
+                            <a onClick={handelGoogleLogin}
                                 className="mb-3 flex w-full items-center justify-center rounded bg-primary px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                                 style={{ backgroundColor: "#3b5998" }}
                                 href="#!"
