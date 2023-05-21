@@ -6,12 +6,12 @@ const AllToy = () => {
     UseTitle('AllToys')
     const [searchText, setSearchText] = useState('')
     const handelSearch = () => {
-        fetch(`http://localhost:3000/allToyBySearch/${searchText}`)
+        fetch(`https://assingement11-server.vercel.app/allToyBySearch/${searchText}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }
     useEffect(() => {
-        fetch('http://localhost:3000/allToy')
+        fetch('https://assingement11-server.vercel.app/allToy')
             .then(res => res.json())
             .then(data => setToys(data))
     }, [])

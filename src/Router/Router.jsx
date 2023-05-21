@@ -51,7 +51,7 @@ import Blog from "../pages/Blog/Blog";
         {
           path: "updateToy/:id",
           element: <UpdateToy></UpdateToy>,
-          loader:({params})=>fetch(`http://localhost:3000/allToy/${params.id}`)
+          loader:({params})=>fetch(`https://assingement11-server.vercel.app/allToy/${params.id}`)
         },
         {
           path: "myToy",
@@ -66,7 +66,7 @@ import Blog from "../pages/Blog/Blog";
               <SingleToy></SingleToy>
             </RequireAuth>
           ,
-          loader:({params})=>fetch(`http://localhost:3000/allToy/${params.id}`)
+          loader:({params})=>fetch(`https://assingement11-server.vercel.app/allToy/${params.id}`)
         },
       ],
     },

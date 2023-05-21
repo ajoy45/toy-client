@@ -11,7 +11,7 @@ const MyToy = () => {
     const handelDelete=id=>{
         const processed=confirm('Are you sure to Delete ?')
         if(processed){
-            fetch(`http://localhost:3000/deleteToy/${id}`,{
+            fetch(`https://assingement11-server.vercel.app/deleteToy/${id}`,{
             method:"DELETE",
         })
         .then(res=>res.json())
@@ -27,7 +27,7 @@ const MyToy = () => {
         
     }
     useEffect(() => {
-        fetch(`http://localhost:3000/myToy?email=${user?.email}`)
+        fetch(`https://assingement11-server.vercel.app/myToy?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
     }, [])

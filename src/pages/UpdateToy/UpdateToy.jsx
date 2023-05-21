@@ -16,7 +16,7 @@ const UpdateToy = () => {
         const toysInfo={
             price,number,description
         }
-        fetch(`http://localhost:3000/updateToy/${_id}`,{
+        fetch(`https://assingement11-server.vercel.app/updateToy/${_id}`,{
             method:"PUT",
             headers:{
                 "content-type":"application/json"

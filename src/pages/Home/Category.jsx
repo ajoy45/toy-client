@@ -8,12 +8,12 @@ const Category = () => {
     const defaultCategory='Dol'
     const handelCategory = (text) => {
         setActiveTab(text)
-        fetch(`http://localhost:3000/toyCategory/${text}`)
+        fetch(`https://assingement11-server.vercel.app/toyCategory/${text}`)
             .then(res => res.json())
             .then(data => setDolls(data))
     }
     useEffect(()=>{
-        fetch(`http://localhost:3000/toyCategory/${defaultCategory}`)
+        fetch(`https://assingement11-server.vercel.app/toyCategory/${defaultCategory}`)
         .then(res=>res.json())
         .then(data=>setDolls(data))
     },[])

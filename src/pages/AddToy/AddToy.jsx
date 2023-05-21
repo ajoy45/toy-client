@@ -20,7 +20,7 @@ const AddToy = () => {
         const toysInfo={
             name,seller_Name:seller,Seller_email:email,price,rating,number,photoURL,description,category:category
         }
-        fetch('http://localhost:3000/add-toy',{
+        fetch('https://assingement11-server.vercel.app/add-toy',{
             method:"POST",
             headers:{
                 "content-type":"application/json"
