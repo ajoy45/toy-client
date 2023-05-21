@@ -26,7 +26,7 @@ const Header = () => {
                         <li><Link to='/allToy'><a>All Toys</a></Link></li>
                         <li><Link to='/myToy'><a>My Toys</a></Link></li>
                         <Link to='/addToy'><a>Add Toy</a></Link>
-                        <li><a>Blogs</a></li>
+                        <li><Link to='/blog'><a>Blogs</a></Link></li>
                     </ul>
                 </div>
                 <a className=" normal-case text-xl"><img src={logo} alt="logo" /></a>
@@ -37,7 +37,7 @@ const Header = () => {
                     <li><Link to='/allToy'><a>All Toys</a></Link></li>
                     <li><Link to='/myToy'><a>My Toys</a></Link></li>
                     <li><Link to='/addToy'><a>Add Toy</a></Link></li>
-                    <li><a>Blogs</a></li>
+                    <li><Link to='/blog'><a>Blogs</a></Link></li>
                     <li onClick={handelLogOut}><a>Logout</a></li>
                 </ul>
             </div>

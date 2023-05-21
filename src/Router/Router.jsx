@@ -12,6 +12,7 @@ import SingleToy from "../pages/SingleToy/SingleToy";
 import RequireAuth from "../protect/RequireAuth";
 import MyToy from "../pages/MyToy/MyToy";
 import UpdateToy from "../pages/UpdateToy/UpdateToy";
+import Blog from "../pages/Blog/Blog";
 
   const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ import UpdateToy from "../pages/UpdateToy/UpdateToy";
         {
           path: "login",
           element: <Login></Login>,
+        },
+        {
+          path: "blog",
+          element: <Blog></Blog>,
         },
         {
           path: "register",
