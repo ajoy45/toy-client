@@ -9,6 +9,10 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import AllToy from "../pages/AllToy/AllToy";
 import SingleToy from "../pages/SingleToy/SingleToy";
+import RequireAuth from "../protect/RequireAuth";
+import MyToy from "../pages/MyToy/MyToy";
+import UpdateToy from "../pages/UpdateToy/UpdateToy";
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -21,7 +25,11 @@ import SingleToy from "../pages/SingleToy/SingleToy";
         },
         {
           path: "addToy",
-          element: <AddToy></AddToy>,
+          element: 
+            <RequireAuth>
+                <AddToy></AddToy>
+            </RequireAuth>
+          ,
         },
         {
           path: "allToy",
@@ -36,8 +44,23 @@ import SingleToy from "../pages/SingleToy/SingleToy";
           element: <Register></Register>,
         },
         {
+          path: "updateToy/:id",
+          element: <UpdateToy></UpdateToy>,
+          loader:({params})=>fetch(`http://localhost:3000/allToy/${params.id}`)
+        },
+        {
+          path: "myToy",
+          element:<RequireAuth>
+            <MyToy></MyToy>
+          </RequireAuth>,
+        },
+        {
           path: "allToy/:id",
-          element: <SingleToy></SingleToy>,
+          element: 
+            <RequireAuth>
+              <SingleToy></SingleToy>
+            </RequireAuth>
+          ,
           loader:({params})=>fetch(`http://localhost:3000/allToy/${params.id}`)
         },
       ],

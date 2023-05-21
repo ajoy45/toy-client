@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import TableData from './tableData';
+import UseTitle from '../../hooks/UseTitle';
 const AllToy = () => {
     const [toys, setToys] = useState([]);
+    UseTitle('AllToys')
     const [searchText, setSearchText] = useState('')
     const handelSearch = () => {
         fetch(`http://localhost:3000/allToyBySearch/${searchText}`)

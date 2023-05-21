@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { authContext } from '../../Auth/AuthProvider';
+import { toast } from 'react-toastify';
+import UseTitle from '../../hooks/UseTitle';
 
 const AddToy = () => {
     const [category,setCategory]=useState('');
- 
+    UseTitle('AddToy')
     const{user}=useContext(authContext);
     const handelAddSubmit=e=>{
         e.preventDefault()
@@ -28,6 +30,7 @@ const AddToy = () => {
         })
         .then(res=>res.json)
         .then(data=>{
+            toast('Added toy successful')
             console.log(data)
         })
 
@@ -35,7 +38,7 @@ const AddToy = () => {
     }
     
     return (
-        <div className=''>
+        <div>
             
                 <h1 className='my-5 text-center pr-28 font-bold uppercase text-red-200'> please add toy</h1>
            

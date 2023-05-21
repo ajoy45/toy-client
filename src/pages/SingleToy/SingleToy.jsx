@@ -1,8 +1,10 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import UseTitle from '../../hooks/UseTitle';
 
 const SingleToy = () => {
     const data = useLoaderData();
+    UseTitle('singleToy')
     const { photoURL, name, seller_Name, Seller_email, price, rating, number, description } = data
     return (
         <div className='flex justify-center mt-20'>

@@ -24,7 +24,7 @@ const Header = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow  rounded-box w-52">
                         <li><Link to='/'><a>Home</a></Link></li>
                         <li><Link to='/allToy'><a>All Toys</a></Link></li>
-                        <li><a>My Toys</a></li>
+                        <li><Link to='/myToy'><a>My Toys</a></Link></li>
                         <Link to='/addToy'><a>Add Toy</a></Link>
                         <li><a>Blogs</a></li>
                     </ul>
@@ -35,7 +35,7 @@ const Header = () => {
                 <ul className="menu menu-horizontal px-1 font-semibold text-2xl">
                     <li><Link to='/'><a>Home</a></Link></li>
                     <li><Link to='/allToy'><a>All Toys</a></Link></li>
-                    <li><a>My Toys</a></li>
+                    <li><Link to='/myToy'><a>My Toys</a></Link></li>
                     <li><Link to='/addToy'><a>Add Toy</a></Link></li>
                     <li><a>Blogs</a></li>
                     <li onClick={handelLogOut}><a>Logout</a></li>
