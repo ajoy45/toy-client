@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const MyToyTable = ({ myToy, index ,handelDelete}) => {
     console.log(myToy)
-    const { Seller_email, photoURL, name,_id } = myToy;
+    const { Seller_email, photoURL, name,_id,price } = myToy;
     return (
 
         <tr>
@@ -23,6 +23,9 @@ const MyToyTable = ({ myToy, index ,handelDelete}) => {
             </td>
             <td>
                 {Seller_email}
+            </td>
+            <td>
+                ${price}
             </td>
             <td>
                 <Link to={`/updateToy/${_id}`} className='bg-sky-200 px-3 py-2 rounded-lg'>UPDATE</Link>

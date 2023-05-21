@@ -3,6 +3,7 @@ import Banner from './Banner';
 import PhotoGallery from './PhotoGallery';
 import Category from './Category';
 import UseTitle from '../../hooks/UseTitle';
+import Team from './Team';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <PhotoGallery></PhotoGallery>
             <Category></Category>
+            <Team></Team>
         </div>
     );
 };

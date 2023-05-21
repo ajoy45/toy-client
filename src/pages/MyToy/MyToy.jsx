@@ -42,6 +42,7 @@ const MyToy = () => {
                             <th>NO</th>
                             <th>Name And Picture</th>
                             <th>Email</th>
+                            <th>Price</th>
                             <th>Update</th>
                             <th>Delete</th>
                         </tr>
