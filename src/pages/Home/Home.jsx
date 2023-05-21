@@ -4,6 +4,7 @@ import PhotoGallery from './PhotoGallery';
 import Category from './Category';
 import UseTitle from '../../hooks/UseTitle';
 import Team from './Team';
+import Count from './Count';
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <PhotoGallery></PhotoGallery>
             <Category></Category>
             <Team></Team>
+            <Count></Count>
         </div>
     );
 };
