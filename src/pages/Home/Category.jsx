@@ -25,7 +25,7 @@ const Category = () => {
                 <button className={`mr-3 px-4 py-2 bg-red-500 text-white rounded-lg ${activeTab==='Wooden'?'bg-black':""}`} onClick={() => handelCategory('Wooden')}>WOODEN</button>
                 <button className={`mr-3 px-4 py-2 bg-red-500 text-white rounded-lg ${activeTab==='Car'?'bg-black':""}`} onClick={() => handelCategory('Car')}>CAR</button>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-16'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
                 {
                     dolls.map(doll => <Card
                         key={doll._id}

@@ -9,7 +9,7 @@ import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='max-w-screen-2xl mx-auto'>
+  <div className='container mx-auto overflow-x-hidden'>
     <React.StrictMode>
       <AuthProvider>
         <RouterProvider router={router} />

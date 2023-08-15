@@ -2,11 +2,11 @@ import React from 'react';
 const Banner = () => {
     return (
 
-        <div className="grid gap-10 lg:grid-cols-2 px-12 my-20">
+        <div className="grid gap-10 lg:grid-cols-2 px-12 my-20 ">
             <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
 
-                <div className="max-w-xl mb-6" data-aos="fade-up"
-                    data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+                <div className="max-w-xl mb-6"data-aos="zoom-in-up"
+                data-aos-anchor-placement="center-bottom" data-aos-duration="2000" >
                     <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
                         <span className='text-red-500'>Exclusive</span> Offer On ToysMake
                         <br className="hidden md:block" />

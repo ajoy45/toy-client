@@ -14,7 +14,7 @@ const Card = ({ doll }) => {
     }
     return (
         
-            <div className="card card-compact w-96 bg-base-100 shadow-xl" data-aos="fade-down"
+            <div className="card card-compact w-full  bg-base-100 shadow-xl" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500">
             <figure><img src={photoURL} alt="Shoes" /></figure>

@@ -1,22 +1,27 @@
 import React from 'react';
 import img from '../../../src/assets/images/logo/1.png'
 import { Link } from 'react-router-dom';
+import image from '../../../src/assets/images/category/bg-3.png'
 const Footer = () => {
     return (
         //  Footer container 
-<footer
-  className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left ">
+<footer style={{
+  backgroundImage:`url(${image})`,
+  backgroundSize:'cover',
+  backgroundPosition:'center'
+}}
+  className=" text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left ">
   <div
     className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
     <div className="mr-12 hidden lg:block ">
-      <span className='text-sky-500'>Get connected with us on social networks:</span>
+      <span className='text-blue-600 text-md'>Get connected with us on social networks:</span>
     </div>
     {/* Social network icons container  */}
     <div className="flex justify-center">
       <a href="https://www.facebook.com/ajoy.biswas.18041" className="mr-6 text-neutral-600 dark:text-neutral-200">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-4 w-4 text-sky-300"
+          className="h-4 w-4 text-blue-600"
           fill="currentColor"
           viewBox="0 0 24 24">
           <path
@@ -26,7 +31,7 @@ const Footer = () => {
       <a href="https://www.linkedin.com/in/ajoy-biswas-942b1b211/" className="text-neutral-600 dark:text-neutral-200">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-4 w-4 text-sky-300"
+          className="h-4 w-4 text-blue-600"
           fill="currentColor"
           viewBox="0 0 24 24">
           <path
@@ -122,7 +127,7 @@ const Footer = () => {
   </div>
 
   {/* Copyright section */}
-  <div className="bg-neutral-200 p-6 text-center dark:bg-neutral-700">
+  <div className=" p-6 text-center dark:bg-neutral-700">
     <span>© 2023 Copyright:</span>
     <a
       className="font-semibold text-neutral-600 dark:text-neutral-400"
