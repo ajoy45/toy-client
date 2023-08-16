@@ -4,7 +4,8 @@ import image2 from '../../../src/assets/images/category/heart.png'
 import { AiOutlineArrowRight } from 'react-icons/ai';
 const Care = () => {
     return (
-        <div className='bg-[#f0eff7] p-12 my-12'>
+        <div className='bg-[#f0eff7] py-24 px-12 my-12' data-aos="fade-right"
+        data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
             <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-5'>
                 <div>
                     <img src={image1} alt="" />

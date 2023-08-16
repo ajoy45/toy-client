@@ -15,7 +15,8 @@ const Client = () => {
                     <img src={image1} alt="" />
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
-                    <div className="card w-full bg-base-100 shadow-xl">
+                    <div className="card w-full bg-base-100 shadow-xl" data-aos="flip-down"
+        data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
                         <figure><img src={client1} alt="Shoes" /></figure>
                         <div >
                             <h2 className="text-center text-3xl mt-4 font-bold">Cristina James</h2>
@@ -27,7 +28,8 @@ const Client = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card w-full bg-base-100 shadow-xl">
+                    <div className="card w-full bg-base-100 shadow-xl" data-aos="flip-down"
+        data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
                         <figure><img src={client2} alt="Shoes" /></figure>
                         <div >
                             <h2 className="text-center text-3xl mt-4 font-bold">Mary Smith</h2>
@@ -39,7 +41,8 @@ const Client = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="card w-full bg-base-100 shadow-xl">
+                    <div className="card w-full bg-base-100 shadow-xl" data-aos="flip-down"
+        data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
                         <figure><img src={client3} alt="Shoes" /></figure>
                         <div >
                             <h2 className="text-center text-3xl mt-4 font-bold">John Doe</h2>

@@ -29,12 +29,13 @@ const responsive = {
 };
 const Slider = () => {
     return (
-        <div className='my-12'>
+        <div className='my-12' data-aos="fade-right"
+        data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
             <h1 className='text-center text-4xl font-bold mb-4'>Category</h1>
                 <div className='flex justify-center'>
                     <img src={bg} alt="" />
                 </div>
-            <Carousel responsive={responsive}>
+            <Carousel responsive={responsive} >
                 <div ><img className='hover:border border-dashed border-blue-600 hover:translate-x-8' src={image1} alt="" /></div>
                 <div><img className='hover:border border-dashed border-blue-600 hover:translate-x-8' src={image2} alt="" /></div>
                 <div><img className='hover:border border-dashed border-blue-600 hover:translate-x-8' src={image3} alt="" /></div>

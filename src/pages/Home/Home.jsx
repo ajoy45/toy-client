@@ -8,6 +8,7 @@ import Slider from './Slider';
 import Offer from './Offer';
 import Client from './Client';
 import Care from './Care';
+import Category from './Category';
 
 const Home = () => {
     UseTitle('home')
@@ -16,6 +17,7 @@ const Home = () => {
             <Banner></Banner>
             <Slider></Slider> 
              <Offer></Offer>
+             <Category></Category>
              <Client></Client>
              <PhotoGallery></PhotoGallery>
              <Care></Care>
